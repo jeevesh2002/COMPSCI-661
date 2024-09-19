@@ -43,7 +43,7 @@ def simulate_doublespend(q, z):
             honest_chain += 1
         
         if honest_chain >= z:
-            if attacker_chain >= honest_chain:
+            if attacker_chain > honest_chain:
                 return True
             elif honest_chain - attacker_chain >= MAX_LEAD:
                 return False
